@@ -11,4 +11,15 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+  //Jey's test
+  it('returns an array of just games, given an object of game objects', () => {
+    const people = {
+    	action: { games: 'Bioshock' },
+    	mystery: { games: 'Myst'},
+    	adventure: { games: 'Monkey Island'}
+    };
+    const result = _.pluck(people, 'games');
+    expect(result).toEqual(['Bioshock', 'Myst', 'Monkey Island']);
+  });
+
 });
