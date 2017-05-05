@@ -26,4 +26,16 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  // Jey's Tests
+
+  it('returns the first matching index when multiple matches in array and starts searching at a given offset', () => {
+    const arr = ['foo', 'bar', 'baz', 'bar', 'bar'];
+    expect(_.indexOf(arr, 'bar', 2)).toBe(3);
+  });
+
+  it('returns -1 for a missing value if search starts after a matching value', () => {
+    const arr = ['foo', 'bar', 'baz', 'papayawhip', 'protoman', 'megaman'];
+    expect(_.indexOf(arr, 'bar', 2)).toBe(-1);
+  });
+
 });
