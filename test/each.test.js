@@ -39,5 +39,18 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  //Jey's Test
+  it('interates every property of an object, preforming a function changing original array at the corresponding index passed', () => {
+    const arr = ['1st', '2nd', '3rd'];
+    const arr2 = ['1st', '2nd', '3rd'];
+    expect(arr.toString()).toBe(arr2.toString());
+    _.each(arr, function(element, index, array) {
+      expect(element).toEqual(array[index]);
+      arr[index] += ' element is changed';
+    });
+    expect(arr.toString()).not.toBe(arr2.toString());
+  });
+
 });
 
