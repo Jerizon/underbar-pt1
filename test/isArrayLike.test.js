@@ -18,4 +18,14 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  //Jey's Test
+  it('returns false for a (not) array-like object but object property length is not a number', () => {
+    const nonArrayLikeObj = {
+      length: 'WhyIsLengthTheDefiningFeatureOfArrays?'
+    };
+    expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
+  });
+
+
 });
