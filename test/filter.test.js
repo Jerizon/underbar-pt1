@@ -23,4 +23,10 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  //Jey's Test
+  it('filters an array to have only string elements', () => {
+    const elements = ['a', 'b', 'c', 6, '7', 'd', 'e', 233, 'f', 866, true];
+    expect(_.filter(elements, stringEl => typeof stringEl === 'string')).toEqual(['a', 'b', 'c', '7', 'd', 'e', 'f']);
+  });
 });

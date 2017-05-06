@@ -20,4 +20,10 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  //Jey's Test 
+  it('returns the same string if given a string', () => {
+    const val = 'Identity Theft';
+    expect(_.identity(val)).toBe(val);
+  });
 });
