@@ -18,4 +18,11 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  // Jey's Test
+  it('rejects sub-arrays from an array', () => {
+    const colors = [['blue', 'light blue', 'sky blue'], 'red', 'orange', 'yellow', ['green', 'forest green', 'blue green'], 'purple'];
+    expect(_.reject(colors, color => Array.isArray(color)===true)).toEqual(['red', 'orange', 'yellow', 'purple']);
+  });
+
 });
